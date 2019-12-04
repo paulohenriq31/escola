@@ -16,7 +16,7 @@
         <th>Materia</th>
         <th>Carga Horaria</th>
         <th>Ementa</th>
-        <th class="acao">Editar</th>
+        <th class="acao" >Editar</th>
         <th class="acao">Excluir</th>
     </thead>
     

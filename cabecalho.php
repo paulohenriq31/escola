@@ -28,6 +28,7 @@
                 <li><a href="materias.php">Materias</a></li>
                 <li><a href="categorias.php">Categorias</a></li>
                 <li><a href="usuarios.php">Usuario</a></li>
+                <li><a href="professores.php">Professores</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
     </div>
