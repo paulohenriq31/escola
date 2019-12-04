@@ -29,6 +29,7 @@
                 <li><a href="categorias.php">Categorias</a></li>
                 <li><a href="usuarios.php">Usuario</a></li>
                 <li><a href="professores.php">Professores</a></li>
+                <li><a href="turmas.php">Turmas</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
     </div>
