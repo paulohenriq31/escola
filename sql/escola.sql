@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2019 às 13:59
+-- Tempo de geração: 05-Dez-2019 às 13:22
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.2.24
 
@@ -40,7 +40,9 @@ CREATE TABLE `tb_categoria` (
 INSERT INTO `tb_categoria` (`id`, `descricao`) VALUES
 (5, 'Papelaria'),
 (7, 'Eletrônico'),
-(8, 'Moveis');
+(8, 'Moveis'),
+(9, 'Bunitin'),
+(10, 'Secretaria ');
 
 -- --------------------------------------------------------
 
@@ -60,8 +62,7 @@ CREATE TABLE `tb_materias` (
 --
 
 INSERT INTO `tb_materias` (`id`, `materia`, `carga_horaria`, `ementa`) VALUES
-(1, 'Matemática Instrumental ', '160', 'Matéria onde é abordado conceitos matemáticos básicos, para que possamos aprender '),
-(2, 'Calculo 3', '80', 'Continuação das matérias de Calculo 1 e Calculo 2');
+(3, 'Matemática ', '80', 'Aulas de cálculos básicos ');
 
 -- --------------------------------------------------------
 
@@ -76,8 +77,17 @@ CREATE TABLE `tb_professores` (
   `telefone` varchar(20) NOT NULL,
   `facebook` varchar(50) NOT NULL,
   `nascimento` varchar(10) NOT NULL,
-  `usuario` int(11) NOT NULL
+  `usuario` varchar(20) NOT NULL,
+  `senha` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tb_professores`
+--
+
+INSERT INTO `tb_professores` (`id`, `nome`, `email`, `telefone`, `facebook`, `nascimento`, `usuario`, `senha`) VALUES
+(2, 'Paulo Henrique dos Santos', 'ph744915@gmail.com', '19.99263-2392', '', '1999-06-24', 'pauloH', 'enox'),
+(3, 'Anderson', 'andpassos@gmail.com', '19.99988-7766', '', '1991-10-04', 'AndPassos', '123');
 
 -- --------------------------------------------------------
 
@@ -99,7 +109,9 @@ CREATE TABLE `tb_recursos` (
 INSERT INTO `tb_recursos` (`id`, `nome`, `quantidade`, `categoria`) VALUES
 (2, 'Lápis', 12, 'Papelaria'),
 (3, 'Caneta', 9, 'Papelaria'),
-(4, 'Projetor', 3, 'Eletronico');
+(4, 'Projetor', 3, 'Eletronico'),
+(5, 'Boletim escolar', 1, 'Secretaria'),
+(6, '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -109,11 +121,20 @@ INSERT INTO `tb_recursos` (`id`, `nome`, `quantidade`, `categoria`) VALUES
 
 CREATE TABLE `tb_turma` (
   `id` int(11) NOT NULL,
-  `nome` varchar(30) NOT NULL,
+  `sala` varchar(30) NOT NULL,
   `periodo` varchar(20) NOT NULL,
-  `horario_inicio` varchar(10) NOT NULL,
-  `horario_fim` varchar(10) NOT NULL
+  `horarioInicio` varchar(10) NOT NULL,
+  `horarioFim` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tb_turma`
+--
+
+INSERT INTO `tb_turma` (`id`, `sala`, `periodo`, `horarioInicio`, `horarioFim`) VALUES
+(1, '1-A', 'Noturno', '19:00', '22:30'),
+(2, '3-A', 'Diurno Matutino', '07:00', '12:20'),
+(3, '2-A', 'Diurno Vespertino', '13:00', '18:20');
 
 -- --------------------------------------------------------
 
@@ -175,31 +196,31 @@ ALTER TABLE `tb_usuarios`
 -- AUTO_INCREMENT de tabela `tb_categoria`
 --
 ALTER TABLE `tb_categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `tb_materias`
 --
 ALTER TABLE `tb_materias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tb_professores`
 --
 ALTER TABLE `tb_professores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tb_recursos`
 --
 ALTER TABLE `tb_recursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tb_turma`
 --
 ALTER TABLE `tb_turma`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tb_usuarios`
