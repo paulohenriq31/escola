@@ -20,9 +20,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index2.php">HOME</a>
+            <a class="navbar-brand" href="index.php">HOME</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <!--<div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="recursos.php">Recurso</a></li>
                 <li><a href="materias.php">Materias</a></li>
@@ -31,7 +31,8 @@
                 <li><a href="professores.php">Professores</a></li>
                 <li><a href="turmas.php">Turmas</a></li>
             </ul>
-        </div><!--/.navbar-collapse -->
+        </div>-->
+        <!--/.navbar-collapse -->
     </div>
 </nav>
 

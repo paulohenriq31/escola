@@ -23,4 +23,17 @@ class Usuario{
         $conexao->exec($query);
         
     }
+
+    public function validarLogin($usuario, $senha){
+        $conexao = new PDO("mysql:host=127.0.0.1;dbname=escola","root","");
+
+        $query = "SELECT * FROM tb_professores WHERE usuario = '".$usuario."' AND senha = '".$senha."'";
+
+        $resultado = $conexao->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach($lista as $um){
+            return $um;
+        }
+    }
 }
