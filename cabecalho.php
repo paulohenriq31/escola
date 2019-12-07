@@ -23,15 +23,24 @@
             <a class="navbar-brand" href="index2.php">HOME</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav mr-auto">
                 <li><a href="recursos.php">Recurso</a></li>
                 <li><a href="materias.php">Materias</a></li>
                 <li><a href="categorias.php">Categorias</a></li>
                 <li><a href="usuarios.php">Usuario</a></li>
                 <li><a href="professores.php">Professores</a></li>
                 <li><a href="turmas.php">Turmas</a></li>
+                
             </ul>
+
+            
+            <ul class="nav navbar-nav">
+                <li class="nav-item text-nowrap"><a href="index.php">Sair</a></li>
+            </ul>
+
+
         </div><!--/.navbar-collapse -->
+        
     </div>
 </nav>
 

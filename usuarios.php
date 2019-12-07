@@ -1,33 +1,32 @@
 <?php
-require_once 'classes/Usuario.php';
+require_once 'classes/Professor.php';
 
-$usuario = new Usuario();
+$usuario = new Professor();
 
-$lista = $usuario->listar();
+$lista = $usuario->listarProfessores();
 
 require_once 'cabecalho.php';
 ?>
-
-<a href="usuario-criar.php">adicionar usuario</a>
-<br>
 <h2>Usuarios</h2>
+<a href="professores-criar.php" class="btn btn-info">adicionar usuario</a>
+<br><br>
+
 <table class="table">
     <thead>
-        <th>Id</th>
+        <!-- <th>Id</th> -->
         <th>Usuarios</th>
         <th>Senha</th>
-        <th>Ações</th>
+        <th class="acao">Alterar</th>
+        <th class="acao">Excluir</th>
     </thead>
     <tbody>
         <?php foreach($lista as $linha){?>
             <tr>
-                <td><?php echo $linha['id'];?></th>
+                <!-- <td><?php echo $linha['id'];?></th> -->
                 <td><?php echo $linha['usuario'];?></td>
                 <td><?php echo $linha['senha'];?></td>
-                <td>
-                    <a href="usuario-editar.php" class="btn btn-info">Alterar</a>
-                    <a href="usuario-excluir.php" class="btn btn-danger">Excluir</a>
-                </td>
+                <td><a href="professores-editar.php?CODIGO=<?php echo $linha['id'];?>" class="btn btn-info">Editar</a></td>    
+                <td><a href="professores-excluir.php?CODIGO=<?php echo $linha['id'];?>" class="btn btn-danger">Excluir</a></td>
             </tr>
         <?php }?>
     </tbody>
