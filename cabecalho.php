@@ -24,6 +24,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav mr-auto">
+                <li><a href="aulas.php">Planos de Aula</a></li>
                 <li><a href="recursos.php">Recurso</a></li>
                 <li><a href="materias.php">Materias</a></li>
                 <li><a href="categorias.php">Categorias</a></li>
