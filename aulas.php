@@ -29,8 +29,8 @@
                 <td title="<?php echo $linha['descricao'] ?>"><?php echo $linha['diaAula'];?></td>
                 <td><?php echo $linha['professor'];?></td>
                 <td><?php echo $linha['materia'];?></td>
-                <th><?php echo $linha['turma'];?></th>
-                <th><?php echo $linha['objetivo'];?></th>
+                <td><?php echo $linha['turma'];?></td>
+                <td><?php echo $linha['objetivo'];?></td>
                 <td><a href="aula-editar.php?CODIGO=<?php echo $linha['id'];?>" class="btn btn-info">Editar</a></td>    
                 <td><a href="aula-excluir.php?CODIGO=<?php echo $linha['id'];?>" class="btn btn-danger">Excluir</a></td>
             </tr>
