@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Dez-2019 às 13:22
--- Versão do servidor: 10.4.8-MariaDB
--- versão do PHP: 7.2.24
+-- Tempo de geração: 16-Mar-2020 às 20:26
+-- Versão do servidor: 10.4.11-MariaDB
+-- versão do PHP: 7.3.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,23 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `escola`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_aulas`
+--
+
+CREATE TABLE `tb_aulas` (
+  `id` int(11) NOT NULL,
+  `diaAula` varchar(100) NOT NULL,
+  `turma` varchar(100) NOT NULL,
+  `professor` varchar(100) NOT NULL,
+  `materia` varchar(100) NOT NULL,
+  `objetivo` varchar(100) NOT NULL,
+  `descricao` text NOT NULL,
+  `recurso` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -153,6 +170,12 @@ CREATE TABLE `tb_usuarios` (
 --
 
 --
+-- Índices para tabela `tb_aulas`
+--
+ALTER TABLE `tb_aulas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `tb_categoria`
 --
 ALTER TABLE `tb_categoria`
@@ -193,6 +216,12 @@ ALTER TABLE `tb_usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `tb_aulas`
+--
+ALTER TABLE `tb_aulas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `tb_categoria`
 --
 ALTER TABLE `tb_categoria`
@@ -228,8 +257,6 @@ ALTER TABLE `tb_turma`
 ALTER TABLE `tb_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
-
--- teste
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
